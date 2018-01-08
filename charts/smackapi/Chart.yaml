@@ -1,0 +1,7 @@
+name: smackapi
+home: https://github.com/torosent/brigade-istio-meetup
+version: 1.1
+description: Simple web app for demonstrating Kubernetes
+maintainers: 
+  - name: torosent
+    email: torosent@microsoft.com
