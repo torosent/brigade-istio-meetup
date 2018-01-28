@@ -65,7 +65,7 @@ events.on("pull_request", (brigadeEvent, project) => {
     var slack = new Job("slack-notify", "technosophos/slack-notify:latest", ["/slack-notify"])
     goJobRunner(golang)
     dockerJobRunner(brigConfig, docker)
-    helmJobRunner(brigConfig, helm, 10, 90, "new")
+    helmJobRunner(brigConfig, helm, 90, 10, "new")
     slackJob(slack, project.secrets.slackWebhook, `brigade pipeline starting for ${brigConfig.get("branch")} with commit ID ${brigConfig.get("gitSHA")}\ncanary testing starting via istio\nplease review analytics`)
 
     // start pipeline
